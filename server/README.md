@@ -1,4 +1,11 @@
-# Keycloak Docker image
+# Tesing version for keycloak
+Prepare the image and the resources needed with `sh prepare.sh`
+
+This will create an image called jboss_keycloak_testing in your local repo. Then use the follwing command to run it.
+
+`docker run -it --rm -v $(pwd)/jboss/keycloak:/opt/jboss/keycloak -v $(pwd)/assets:/opt/jboss_assets -p 8080:8080 jboss_keycloak_testing sh /opt/jboss_assets/runner.sh`
+
+# Keycloak Docker image (Original readme)
 
 Example Dockerfile with Keycloak server.
 
